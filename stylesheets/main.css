@@ -78,11 +78,11 @@
 }
 
 .foods {
-    padding: 10px 5%;
+    padding: 10px 10%;
     background-color: #f1f1f1;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .atcbutton {
@@ -107,7 +107,7 @@
 }
 
 img {
-    height: 200px;
+    height: 300px;
     width: 100%;
 }
 
@@ -149,4 +149,15 @@ img {
     .mainnav {
         align-items: unset;
     }
+}
+@media only screen and (max-width:660px) {
+    .foods{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 5%;
+    }
+    
+}
+
+.lm{
+    text-align: center;
 }

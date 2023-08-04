@@ -31,22 +31,22 @@ const findSeason= () => {
     // console.log(month)
     switch (month) {
         case (1 || 2):
-            season = "shisir"
+            season = "Shisir"
             break;
         case (3 || 4):
-            season = "basanta"
+            season = "Basanta"
             break;
         case (5 || 6):
-            season = "grisma"
+            season = "Grisma"
             break;
         case (7 || 8):
-            season = "barsa"
+            season = "Barsa"
             break;
         case (9 || 10):
-            season = "sharad"
+            season = "Sharad"
             break;
         case (10 || 11):
-            season = "hementa"
+            season = "Hementa"
             break;
         default:
             break;
@@ -54,7 +54,7 @@ const findSeason= () => {
 
 
         foodsArr.forEach(element => {
-            if (element.rSeason == season) {
+            if (element.rSeasons == season) {
                 render.iRender(element);
             }
         });
@@ -67,6 +67,9 @@ const render = (() => {
     let i=1;
     const foodSection=document.querySelector(`.foods`);
     const iRender = (item) => {
+        if (i>8) {
+            return;
+        }
         console.log(item)
         foodSection.innerHTML+=
         `<div class="item">
@@ -76,6 +79,7 @@ const render = (() => {
                     <button class="atcbutton" onclick="addtocart()">add to cart</button>
                 </div>
             `
+            i++;
     }
 
     return {
