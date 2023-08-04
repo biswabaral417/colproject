@@ -1,0 +1,54 @@
+{
+    "foods":[
+        {
+        "itemName":"butterScotch",
+        "itemPrice":"80RS",
+        "itemImgLoc":"../images/foodimages/icecream/buttorScotch.jpg",
+        "rSeason":"barsa"
+    },
+        {
+        "itemName":"vanilla",
+        "itemPrice":"60RS",
+        "itemImgLoc":"../images/foodimages/icecream/vanillaIce.jpeg",
+        "rSeason":"barsa"
+    },
+        {
+        "itemName":"coke",
+        "itemPrice":"85RS",
+        "itemImgLoc":"../images/foodimages/colddrinks/Coke-500ml.jpg",
+        "rSeason":"barsa"
+    },
+        {
+        "itemName":"Gorkha-strong Extra-Strong",
+        "itemPrice":"300RS",
+        "itemImgLoc":"../images/foodimages/colddrinks/Gorkha-Strong.png",
+        "rSeason":"barsa"
+    },
+        {
+        "itemName":"chickenCaesarSalad",
+        "itemPrice":"620RS",
+        "itemImgLoc":"../images/foodimages/ortherfoods/chickenCaesarSalad.jpg",
+        "rSeason":"barsa"
+    },
+        {
+        "itemName":"seaFoodsalad",
+        "itemPrice":"550RS",
+        "itemImgLoc":"../images/foodimages/ortherfoods/seaFoodsalad.jpeg",
+        "rSeason":"barsa"
+    },
+        {
+        "itemName":"seaFoodsalad",
+        "itemPrice":"550RS",
+        "itemImgLoc":"../images/foodimages/ortherfoods/seaFoodsalad.jpeg",
+        "rSeason":"barsa"
+    },
+        {
+        "itemName":"seaFoodsalad",
+        "itemPrice":"550RS",
+        "itemImgLoc":"../images/foodimages/ortherfoods/seaFoodsalad.jpeg",
+        "rSeason":"barsa"
+    }
+    
+   
+    ]
+}
