@@ -1,26 +1,30 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const path = require('path');
 
-// Serve static files from the "public" directory
+// Serve static files (HTML, CSS, and client-side JS)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Endpoint to serve the JSON data
-// app.get('/api/foods', (req, res) => {
-//   const foodsData = require('./public/foods.JSON');
-//   res.json(foodsData.foods);
-// });
-//dont know why this doesnt work
+// Mock data for foods (replace this with your actual data source or database)
+const foodsData = require('./public/foods.json');
 
-
-
-// Serve the index.html file for any other route
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Endpoint to send the foods data to the frontend
+app.get('/api/foods', (req, res) => {
+  res.json(foodsData.foods);
 });
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+// Endpoint to handle search requests
+app.get('/api/search', (req, res) => {
+  const { searchText } = req.query;
+
+  const filteredFoods = foodsData.foods.filter((item) =>
+    item.itemName.toLowerCase().includes(searchText.toLowerCase())
+  );
+
+  res.json(filteredFoods);
+});
+
+const PORT = 3000; // Change this to your preferred port
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
